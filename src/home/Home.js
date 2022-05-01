@@ -57,11 +57,54 @@ export default function Home(){
           </div>
         </div>
         <div className="middle-image">
-          {/* <img src={bus1}  /> */}
+          <div>
           <img src={bus2} />
+          <p>Modern and well maintained buses</p>
+
+          </div>
+          <div>
           <img src={seat2} />
+            <p>Comfortable and spacious seats</p>
+          </div>
+          
+          
+          
         </div>
-        <div className="footer-container">
+        <div className='about'>
+            <h2>About Us</h2>
+            <p>Safiri is a transport company based in Nairobi that offer bus transport service to and from Nairobi at very affodable cost.</p>
+              <p>Safiri allows you to check the available bus online without having to physically appear at the bus terminal hence saving you time and cost.</p><p> You can also book a seat online and check when the bus will be leaving. </p>
+        </div>
+        <div className='service-title'>
+        <h2>................................  Services  ................................</h2>
+       
+        </div>
+        <div className='services'>
+            
+            <div><h3>Bus Booking</h3>
+            <p>Check which bus is available, available seats, price per seat and book a seat online</p>
+            <p>Our customers are our number one priolity.</p>
+            <button>Book Now</button>
+
+
+            </div>
+            
+            <div><h3>Driver Registration </h3>
+            <p>Are you a driver and you would like to serve with us? </p>
+            <p>It is easy, click the button below</p>
+            <button>Register as a Driver</button>
+            </div>
+            <div><h3>Bus Registration</h3>
+            <p>Are you a bus owner and you would like to get the value for your investment? </p>
+            <p>Register your bus with us and relax, wait for the harvest.</p>
+            <button>Register a Bus</button>
+            </div>
+      
+
+        </div>
+        <div className='service-bottom'> <h2>..............................................................................................................</h2>
+        </div>
+       <div className="footer-container">
           <div className="footer">
             <footer>
               <div class="row my-5 justify-content-center py-5">
