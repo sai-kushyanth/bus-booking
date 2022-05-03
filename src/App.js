@@ -5,11 +5,10 @@ import Profile from './profile/Profile';
 
 function App() {
   return (
-    <div >
-      <NavBar/>
-      <Profile/>
-      <LoginPage/>
-    </div>
+
+    <div>
+      
+    </div >
   );
 }
 
