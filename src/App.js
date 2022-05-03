@@ -5,11 +5,7 @@ import Book from './signup/register';
 
 function App() {
   return (
-    <div>
-      {/* <Main></Main> */}
-      <Book></Book>
 
-    </div>
   );
 }
 
