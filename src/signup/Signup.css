@@ -1,0 +1,42 @@
+.signup{
+  margin: 0 auto;
+  padding: 5%;
+  background-color: white;
+  border: 2px solid black;
+  width: 30%;
+  margin-top: 5%;
+}
+.inputs{
+  margin-bottom: 2%;
+  font-size: 2em;
+}
+.inputs input{
+  height: 4vh;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 22px;
+}
+label{
+  color: white;
+}
+.book{
+  font-size: 2em;
+}
+.btn{
+  background-color: rgba(75,188,67,255);
+  text-align: center;
+  height: 4vh;
+}
+button{
+  font-size: 1.5em;
+  background-color: rgba(75,188,67,255);
+  border: none;
+  margin-top: 1%;
+}
+form > h3{
+  text-align: center;
+  font-size: 1.5em;
+}
+.cust{
+  font-size: 1.5em;
+}
