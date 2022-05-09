@@ -47,10 +47,11 @@ nav ul a {
 }
 
 .form-wrapper {
-  background: lightgreen;
+  background: rgb(110, 179, 110);
   width: 60%;
   color: white;
   border-radius: 20px;
+  font-size: large;
 }
 
 .form-head {
@@ -129,11 +130,11 @@ nav ul a {
   width: 100%;
   border-radius: 20px;
 }
-=======
-*{
+
+/* *{
   background-color: green;
   color: white;
-}
+} */
 .signup{
   margin: 10%;
   padding: 5%;
