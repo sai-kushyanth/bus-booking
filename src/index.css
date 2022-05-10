@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,14 +39,14 @@ nav ul a {
 #signin {
   min-height: 100vh;
   /* background-image:  linear-gradient(rgba(0,0,0,0.5), transparent),url('/img/contact-mountain.png'); */
-  background-size: cover;
+  /* background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.form-wrapper {
+/* .form-wrapper {
   background: rgb(110, 179, 110);
   width: 60%;
   color: white;
@@ -83,9 +83,9 @@ nav ul a {
   padding: 1rem 3rem;
 }
 
-.P-container {
+.P-container { */
   /* background: lightgoldenrodyellow; */
-  min-height: 100vh;
+  /* min-height: 100vh;
   width: 90%;
   margin: auto;
   margin-top: 2rem;
@@ -93,9 +93,9 @@ nav ul a {
 
 .P-card {
   background: rgb(218, 241, 218);
-  display: flex;
+  display: flex; */
   /* text-align: center; */
-  align-items: center;
+  /* align-items: center;
   -webkit-box-shadow: -5px 7px 5px 0px rgba(223,237,242,1);
   -moz-box-shadow: -5px 7px 5px 0px rgba(223,237,242,1);
   box-shadow: -5px 7px 5px 0px rgba(223,237,242,1);
@@ -129,36 +129,9 @@ nav ul a {
 .B-card img {
   width: 100%;
   border-radius: 20px;
-}
+} * */
 
 /* *{
   background-color: green;
   color: white;
 } */
-.signup{
-  margin: 10%;
-  padding: 5%;
-  background-color: white;
-  width: 70%;
-}
-.user, 
-.email,
-.pass{
-  margin-bottom: 3%;
-  
-  font-size: 2em;
- 
-}
-input{
-  border: 2px solid red;
-  padding: 1%;
-  margin-left: 5%;
-  background-color: white;
-  width: 50%;
-  font-size: 28px;
-  color: black;
-}
-label{
-  color: white;
-}
-

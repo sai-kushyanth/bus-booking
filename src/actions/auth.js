@@ -6,10 +6,10 @@ export const registerDriver = (driver)=>async(dispatch)=>{
     try {
         const data = await api.registerDriver(driver)
         console.log(data)
-        {data.status ==201 
-            console.log('yes')
-            navigate('/login')
-        }
+        // {data.status ==201 
+        //     console.log('yes')
+        //     navigate('/login')
+        // }
         console.log(data.status)
     } catch (error) {
         console.log(error)
@@ -37,3 +37,14 @@ export const login = (info)=>async(dispatch)=>{
     }
 
 }
+export const busbooking = (details)=>async(dispatch)=>{
+    try {
+        const data = await api.busbooking(details)
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+        
+    }
+
+}
+

@@ -5,6 +5,7 @@
   border: 2px solid black;
   width: 30%;
   margin-top: 5%;
+  
 }
 .inputs{
   margin-bottom: 2%;
@@ -16,9 +17,9 @@
   margin: 0 auto;
   font-size: 22px;
 }
-label{
+/* label{
   color: white;
-}
+} */
 .book{
   font-size: 2em;
 }

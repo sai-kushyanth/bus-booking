@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import LoginPage from './login/LoginPage';
 import NavBar from './navbar/NavBar';
 import Profile from './profile/Profile';
@@ -12,6 +12,7 @@ import './App.css';
 import Main from './signup/Signup'
 import Book from './signup/Register';
 import CustomerRegister from './signup/Customer'
+import BusList from './Fetch/Buslist';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 
@@ -32,7 +33,9 @@ function App() {
           </Route>
           <Route path="customer" element={<CustomerRegister />}>
           </Route>
-          <Route path="Book" element={<Book />}>
+          <Route path="busbooking" element={<Book />}>
+          </Route>
+          <Route path="buses" element={<BusList />}>
           </Route>
         </Routes>
       </BrowserRouter>
