@@ -1,6 +1,7 @@
 import axios  from 'axios'
 import React,{useState, useEffect} from 'react'
 import './Signup.css'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const baseURL = 'https://backend-safiri.herokuapp.com/driver/api/bus';

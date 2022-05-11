@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import { useDispatch } from 'react-redux';
 import './Signup.css' ;
 import {registerCustomer} from '../actions/auth'
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const initialState = {
     username : '',
@@ -74,7 +76,8 @@ function CustomerRegister(){
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already have an account? <a href="/sign-in">Login</a>
+          Already have an account? <Link to='/login'>login</Link>
+
         </p>
       </form>
       </div>

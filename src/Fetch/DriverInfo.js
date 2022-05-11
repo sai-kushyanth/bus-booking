@@ -47,7 +47,7 @@ let getBuses =async()=>{
         <div>
         <h1>Available buses</h1>
         <div style={{margin:50}}>
-       {buses?(
+       {buses.diver==loginuser.id?(
            <div>{buses.map((bus,index)=>(
             <div className="card" key={bus.id} style={{marginTop:20}}>
             <img src={bus.bus_image} style={{width: 300, height: 200}}/>
@@ -59,8 +59,35 @@ let getBuses =async()=>{
               <p className="card-text">{bus.status}</p>
               <Link to='/bookingform'>Book Now</Link>
             </div>
-            
-                     
+
+           {/* <button className="nextButton" onClick={handleShow}>open modal</button> */}
+
+
+
+            {/* <Button className="nextButton" onClick={handleShow}>
+        Open Modal
+      </Button> */}
+
+
+{/* <button onClick={openModal}>Open Modal</button>
+      <Modal
+        // isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        // onRequestClose={closeModal}
+        // style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal> */}
 
 
 

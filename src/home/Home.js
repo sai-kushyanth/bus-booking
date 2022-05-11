@@ -5,7 +5,8 @@ import bus2 from './home-assets/bus2.jpg';
 import bus4 from './home-assets/bus5.jpeg';
 import seat1 from './home-assets/seat1.jpeg';
 import seat2 from './home-assets/seat2.jpeg';
-import logo from './home-assets/safiri-logo.png';
+import logo from './home-assets/safiri-logoo.png';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 
@@ -13,41 +14,26 @@ export default function Home(){
     return (
       <div className="home-container">
         <div className="navbar">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">
+        <div><a className="navbar-brand" href="#">
             <img src={logo} />
             </a>
-            {/* <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button> */}
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">
+            <a class="nav-item nav-link active" href="#">
                   Home <span class="sr-only">(current)</span>
                 </a>
-                <a class="nav-item nav-link" href="#">
-                  About Us
-                </a>
-                <a class="nav-item nav-link" href="#">
-                  Services
-                </a>
-                <a class="nav-item nav-link disabled" href="#">
-                  Contact Us
-                </a>
-                <a class="nav-item nav-link disabled" href="#">
-                  Login
-                </a>
+             </div>
+                
+          <nav className="navbar navbar-expand-lg navbar">
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+               
+                
+                <Link to='/login'>login</Link>
+                <Link to='/customer'>sign up</Link>
               </div>
-            </div>
-          </nav>
+           </div>
+       </nav>
         </div>
         <div className="image-container">
           <div className="intro">
@@ -70,43 +56,50 @@ export default function Home(){
           
           
         </div>
-        <div className='about'>
-            <h2>About Us</h2>
-            <p>Safiri is a transport company based in Nairobi that offer bus transport service to and from Nairobi at very affodable cost.</p>
-              <p>Safiri allows you to check the available bus online without having to physically appear at the bus terminal hence saving you time and cost.</p><p> You can also book a seat online and check when the bus will be leaving. </p>
+        <div className="container">
+        
+            <div className='about text-center'>
+                <h2 className="p-4">About Us</h2>
+                <p>Safiri is a transport company based in Nairobi that offer bus transport service to and from Nairobi at very affodable cost.</p>
+                  <p>Safiri allows you to check the available bus online without having to physically appear at the bus terminal hence saving you time and cost.</p><p> You can also book a seat online and check when the bus will be leaving. </p>
+            </div>
         </div>
-        <div className='service-title'>
-        <h2>................................  Services  ................................</h2>
-       
-        </div>
-        <div className='services'>
-            
-            <div><h3>Bus Booking</h3>
-            <p>Check which bus is available, available seats, price per seat and book a seat online</p>
+        <div className="container">
+        <h2 className='text-center bold'>Services</h2> <br/>
+  <div className="card-deck mb-3 text-center">
+    <div className="card mb-4 shadow-sm">
+      <div className="card-header">
+        <h4 className="my-0 font-weight-normal">Bus Booking</h4>
+      </div>
+      <div className="card-body">
+        <ul className="list-unstyled mt-3 mb-4">
+        <p>Check which bus is available, available seats, price per seat and book a seat online</p>
             <p>Our customers are our number one priolity.</p>
             
-            <button ><a href='/'>Book Now</a></button>
+        </ul>
+        <button type="button" className="btn btn-outline-dark service-btn">
+            <Link to='/customer' className="p-3 text-white">Book </Link>
+        </button>
 
-
-            </div>
-            
-            <div><h3>Driver Registration </h3>
-            <p>Are you a driver and you would like to serve with us? </p>
-            <p>It is easy, click the button below</p>
-            <button ><a href='/'>Driver Registration</a></button>
-            
-            </div>
-            <div><h3>Bus Registration</h3>
-            <p>Are you a bus owner and you would like to get the value for your investment? </p>
+        {/* <a type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</a> */}
+      </div>
+    </div>
+    <div className="card mb-4 shadow-sm">
+      <div className="card-header">
+        <h4 className="my-0 font-weight-normal">Driver Registration</h4>
+      </div>
+      <div className="card-body">
+        <ul className="list-unstyled mt-3 mb-4">
+        <p>Are you a bus owner and you would like to get the value for your investment? </p>
             <p>Register your bus with us and relax, wait for the harvest.</p>
-            <button><a href='/'>Register a Bus</a></button>
-            
-            </div>
-      
-
-        </div>
-        <div className='service-bottom'> <h2>..............................................................................................................</h2>
-        </div>
+        </ul>
+        <button type="button" className="btn btn-outline-dark service-btn">
+            <Link to='/driver' className="p-3 text-white">Register a Driver</Link>
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
        <div className="footer-container">
           <div className="footer">
             <footer>

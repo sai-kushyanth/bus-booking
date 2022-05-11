@@ -7,6 +7,7 @@ import Profile from './profile/Profile';
 import Home from './home/Home';
 
 import Dashboard from './dashboard/Dashboard';
+import BookingForm from './Fetch/Busbooking';
 
 import './App.css';
 import Main from './signup/Signup'
@@ -29,13 +30,15 @@ function App() {
           </Route>
           <Route path="login" element={<LoginPage />}>
           </Route>
-          <Route path="signup" element={<Main />}>
+          <Route path="driver" element={<Main />}>
           </Route>
           <Route path="customer" element={<CustomerRegister />}>
           </Route>
           <Route path="busbooking" element={<Book />}>
           </Route>
           <Route path="buses" element={<BusList />}>
+          </Route>
+          <Route path="bookingform" element={<BookingForm />}>
           </Route>
         </Routes>
       </BrowserRouter>
