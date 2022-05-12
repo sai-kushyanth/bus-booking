@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link';
 import {login} from '../actions/auth'
 import './loginPage.css'
+import {useNavigate} from "react-router-dom"
+
 
 const initialState = {
     username : '',
@@ -15,9 +17,45 @@ function LoginRegister(){
 
     const [loginData, setLoginData] = useState(initialState)
     const dispatch = useDispatch()
-    const handleSubmit = (e)=>{
+    const navigate = useNavigate()
+    const handleSubmit =async (e)=>{
         e.preventDefault()
         dispatch(login(loginData))
+        setTimeout(function() {
+            
+            const userId =localStorage.getItem('userId')
+        const userRole =  localStorage.getItem('userRole')
+        if (userId && userRole === "Customer") {
+            console.log('tested')
+            navigate('/buses')
+        }
+        else if(userId && userRole === "Driver") {
+            console.log('tested')
+            navigate('/')}
+
+            }, 3000);
+        
+
+        // console.log('userid',userId)
+        // if (userId){
+            
+        //     navigate('/buses')
+        // }
+        
+        // console.log(data.data.User_role)
+        
+        //     // navigate('/buses')
+        //     // this.history.push("/buses");
+        //     console.log("passed")
+        //     console.log(data)
+        //     // <Route exact path="/">
+        //     //  <Navigate to="/buses" /> : <BusList />
+        //     // </Route>
+        //     // return <Navigate to={{ pathname: '/buses'}} />
+        // }
+        // else{
+        //     console.log("failed")
+        // }
         // if (roles && roles.indexOf(currentUser.role) === -1) {
         //     // role not authorised so redirect to home page
         //     return <Redirect to={{ pathname: '/'}} />

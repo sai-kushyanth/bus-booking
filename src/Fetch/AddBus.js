@@ -7,7 +7,7 @@ import logo from "../home/home-assets/safiri-logoo.png";
 
 
 const initialState = {
-  user_name: localStorage.getItem('userId'),
+  user_name: "",
   phone_no: "",
   departure_point: "",
   destination: "",
@@ -15,15 +15,14 @@ const initialState = {
   price: "",
   time: "",
   no_of_seats: "",
-  bus_id: localStorage.getItem('busId'),
 };
 
-function BookingForm() {
+function AddBus() {
   const [bookingData, setBookingData] = useState(initialState);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(busbooking({...bookingData, price:localStorage.getItem('seatCost')*bookingData.no_of_seats}));
+    dispatch(busbooking(bookingData));
     console.log(bookingData);
   };
 
@@ -49,15 +48,45 @@ function BookingForm() {
     <div className="signup">
       <form onSubmit={handleSubmit}>
         <h2 >Booking Information</h2>
-        <div hidden className="inputs">
-          <label>User Name</label>
+        <div className="inputs">
+          <label>Bus Category</label>
+
           <input
             type="text"
             className="form-control"
-            placeholder="eg.3"
-            value={ localStorage.getItem('userId')}
-            hidden
-            name="user_name"
+            placeholder="eg.bus"
+            name="category"
+            onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+          />
+        </div>
+
+        <label>
+        Vehicle
+        <select>
+          <option value="bus">Bus</option>
+          <option >Van</option>
+          <option >Matatu</option>
+        </select>
+        onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+      </label>
+
+        <div className="inputs">
+          <label>Bus Image</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="eg.upload image"
+            name="bus_image"
             onChange={(e) =>
               setBookingData({
                 ...bookingData,
@@ -67,12 +96,57 @@ function BookingForm() {
           />
         </div>
         <div className="inputs">
-          <label>Your Phone No.</label>
+          <label>Bus Number</label>
           <input
             type="text"
             className="form-control"
-            placeholder="eg.03345677"
-            name="phone_no"
+            placeholder="eg.123"
+            name="bus_number"
+            onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+          />
+        </div>
+        <div className="inputs">
+          <label>Route</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="eg.Nairobi-Mombasa"
+            name="route"
+            onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+          />
+        </div>
+        <div className="inputs">
+          <label>No. of Seats</label>
+          <input
+            type="date"
+            className="form-control"
+            placeholder="eg.22"
+            name="seat"
+            onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+          />
+        </div>
+        <div className="inputs">
+          <label>Cost per Seat</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="eg.100"
+            name="cost_per_seat"
             onChange={(e) =>
               setBookingData({
                 ...bookingData,
@@ -96,6 +170,7 @@ function BookingForm() {
             }
           />
         </div>
+
         <div className="inputs">
           <label>Destination</label>
           <input
@@ -112,12 +187,12 @@ function BookingForm() {
           />
         </div>
         <div className="inputs">
-          <label>Date</label>
+          <label>Driver</label>
           <input
-            type="date"
+            type="text"
             className="form-control"
-            placeholder="eg.22-3-2000"
-            name="date"
+            placeholder="eg.Steve"
+            name="driver"
             onChange={(e) =>
               setBookingData({
                 ...bookingData,
@@ -127,28 +202,12 @@ function BookingForm() {
           />
         </div>
         <div className="inputs">
-          <label>Time</label>
+          <label>Bus Status</label>
           <input
             type="text"
             className="form-control"
-            placeholder="eg.12.30"
-            name="time"
-            onChange={(e) =>
-              setBookingData({
-                ...bookingData,
-                [e.target.name]: e.target.value,
-              })
-            }
-          />
-        </div>
-
-        <div className="inputs">
-          <label>Number of Seats</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="eg.3"
-            name="no_of_seats"
+            placeholder="eg.1 for active or 2 for inactive"
+            name="status"
             onChange={(e) =>
               setBookingData({
                 ...bookingData,
@@ -158,25 +217,27 @@ function BookingForm() {
           />
         </div>
         <div className="inputs">
-          <label>You Will Pay</label>
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Kshs"
-            readonly
-            name="price"
-            value={localStorage.getItem('seatCost')*bookingData.no_of_seats}
-          />
-        </div>
-        <div hidden className="inputs">
-          <label>bus id</label>
+          <label>Departure Time</label>
           <input
             type="text"
             className="form-control"
-            placeholder="eg.3"
-            value={ localStorage.getItem('busId')}
-            hidden
-            name="bus_id"
+            placeholder="eg.12.00 pm"
+            name="departure_time"
+            onChange={(e) =>
+              setBookingData({
+                ...bookingData,
+                [e.target.name]: e.target.value,
+              })
+            }
+          />
+        </div>
+        <div className="inputs">
+          <label>Estimated Arrival Time</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="eg.12.00 pm"
+            name="arrival_time"
             onChange={(e) =>
               setBookingData({
                 ...bookingData,
@@ -269,4 +330,4 @@ function BookingForm() {
     </div>
   );
 }
-export default BookingForm;
+export default AddBus;

@@ -9,28 +9,28 @@ import seat3 from "../home/home-assets/seat3.jpg";
 
 const baseURL = "https://backend-safiri.herokuapp.com/";
 
-function BusList() {
-  const [buses, setBusInfo] = React.useState(null);
+function MyBookings() {
+  const [myBookings, setBusBookingInfo] = React.useState(null);
   
 
   React.useEffect(() => {
-    getBuses();
+    getBusBooking();
   }, []);
-  let getBuses = async () => {
+  let getBusBookings = async () => {
     let response = await fetch(
-      "https://backend-safiri.herokuapp.com/driver/api/bus"
+      "https://backend-safiri.herokuapp.com/driver/api/bus/"
     );
     let data = await response.json();
-    setBusInfo(data);
+    setBusBookingInfo(data);
   };
-  const handler = function(e){
-    localStorage.setItem('busId', e.target.getAttribute("data-index"));
-    localStorage.setItem('seatCost', e.target.getAttribute("data-test"));
-    console.log(e.target.getAttribute("data-index")); //will log the index of the clicked item
-    console.log(e.target.getAttribute("data-test")); //will log the index of the clicked item
-};
+//   const handler = function(e){
+//     localStorage.setItem('busId', e.target.getAttribute("data-index"));
+//     localStorage.setItem('seatCost', e.target.getAttribute("data-test"));
+//     console.log(e.target.getAttribute("data-index")); //will log the index of the clicked item
+//     console.log(e.target.getAttribute("data-test")); //will log the index of the clicked item
+// };
 
-  console.log("fetched buses", buses);
+  console.log("fetched buses", busBookings);
   const logout =()=>{
     localStorage.clear()
     
@@ -186,4 +186,4 @@ function BusList() {
   );
 }
 
-export default BusList;
+export default MyBookings;

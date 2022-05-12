@@ -5,13 +5,21 @@ import bus2 from './home-assets/bus2.jpg';
 import bus4 from './home-assets/bus5.jpeg';
 import seat1 from './home-assets/seat1.jpeg';
 import seat2 from './home-assets/seat2.jpeg';
+import seat3 from './home-assets/seat3.jpeg';
 import logo from './home-assets/safiri-logoo.png';
 import { HashLink as Link } from 'react-router-hash-link';
 
 
 
 export default function Home(){
+  const userRole= localStorage.getItem('userRole')
+  const logout =()=>{
+    localStorage.clear()
+    window.location.reload()
+    
+  }
     return (
+      
       <div className="home-container">
         <div className="navbar">
         <div><a className="navbar-brand" href="#">
@@ -27,10 +35,17 @@ export default function Home(){
             
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
+               {userRole?(
+                 <Link to='/' onClick={logout}>logout</Link>
+               ):
                
-                
-                <Link to='/login'>login</Link>
+               <>
+                 <Link to='/login'>login</Link>
                 <Link to='/customer'>sign up</Link>
+                 </>
+               }
+                
+                
               </div>
            </div>
        </nav>
@@ -53,7 +68,19 @@ export default function Home(){
             <p>Comfortable and spacious seats</p>
           </div>
           
-          
+          {/* <div>
+            <div className="card" >
+              <img src={seat3}  />
+              <div className="card-body">
+                <h4 className="card-title">John Doe</h4>
+                <p className="card-text">Some example text.</p>
+                <a href="#" class="btn btn-primary">
+                  See Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> */}
           
         </div>
         <div className="container">
