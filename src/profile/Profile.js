@@ -14,21 +14,8 @@ function Profile() {
             </div>
 
             <div className="buses">
-                    <div className="B-card">
-                        <img src="https://media.istockphoto.com/photos/trafficlights-in-the-city-at-night-time-picture-id1045929296?k=20&m=1045929296&s=612x612&w=0&h=SesvBpVP7HsH8oofc32KZngsuAixGsK9fiJ0cVI93kk="/>
-                    </div>
-                    <div className="B-card">
-                        <img src="https://media.istockphoto.com/photos/trafficlights-in-the-city-at-night-time-picture-id1045929296?k=20&m=1045929296&s=612x612&w=0&h=SesvBpVP7HsH8oofc32KZngsuAixGsK9fiJ0cVI93kk="/>
-                    </div>
-                    <div className="B-card">
-                        <img src="https://media.istockphoto.com/photos/trafficlights-in-the-city-at-night-time-picture-id1045929296?k=20&m=1045929296&s=612x612&w=0&h=SesvBpVP7HsH8oofc32KZngsuAixGsK9fiJ0cVI93kk="/>
-                    </div>
-                    <div className="B-card">
-                        <img src="https://media.istockphoto.com/photos/trafficlights-in-the-city-at-night-time-picture-id1045929296?k=20&m=1045929296&s=612x612&w=0&h=SesvBpVP7HsH8oofc32KZngsuAixGsK9fiJ0cVI93kk="/>
-                    </div>
-                    <div className="B-card">
-                        <img src="https://media.istockphoto.com/photos/trafficlights-in-the-city-at-night-time-picture-id1045929296?k=20&m=1045929296&s=612x612&w=0&h=SesvBpVP7HsH8oofc32KZngsuAixGsK9fiJ0cVI93kk="/>
-                    </div>
+                   
+                   
                 </div>
         </section>
     )

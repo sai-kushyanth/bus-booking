@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import './Signup.css' ;
 import {registerDriver} from '../actions/auth'
 import {useNavigate} from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 
@@ -29,7 +30,7 @@ function Main(){
 
     return(
         <div className='signup'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} type="post">
         <h3>Sign Up</h3>
         <div className="inputs">
           <label></label>
@@ -71,26 +72,14 @@ function Main(){
             onChange={(e)=>setDriverData({...driverData, [e.target.name]:e.target.value})}
           />
         </div>
-        {/* <div className="register-form-form-role">
-          <p className="register-form-form-role-title">Sign up as : </p>
-          <div className="register-form-form-role-container">
-            <div className="register-form-form-role-user">
-            <p className="cust" >Driver</p>
-              <input type="radio" name="role" id="role" />
-            </div>
-            <div className="register-form-form-role-mover">
-            <p className="cust" >Customer</p>
-              <input type="radio" name="role" id="role" />
-            </div>
-          </div>
-        </div> */}
+      
         <div className="btn">
           <button type="submit" >
             Sign Up
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already have an account? <a href="/sign-in">Login</a>
+          Already have an account? <Link to='/login'>login</Link>
         </p>
       </form>
       </div>
