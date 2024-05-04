@@ -40,6 +40,7 @@ export default function Home(){
                ):
                
                <>
+              
                  <Link to='/login'>login</Link>
                 <Link to='/customer'>sign up</Link>
                  </>
@@ -52,7 +53,7 @@ export default function Home(){
         </div>
         <div className="image-container">
           <div className="intro">
-            <h1>Welcome to Safiri</h1>
+            <h1>Welcome to Yeluri</h1>
 
             <h4>Travel with confidence and luxury</h4>
           </div>
@@ -87,8 +88,8 @@ export default function Home(){
         
             <div className='about text-center'>
                 <h2 className="p-4">About Us</h2>
-                <p>Safiri is a transport company based in Nairobi that offer bus transport service to and from Nairobi at very affodable cost.</p>
-                  <p>Safiri allows you to check the available bus online without having to physically appear at the bus terminal hence saving you time and cost.</p><p> You can also book a seat online and check when the bus will be leaving. </p>
+                <p>Yeluri is a transport company based in Hyderabad that offer bus transport service to and from Hyderabad at very affodable cost.</p>
+                  <p>Yeluri allows you to check the available bus online without having to physically appear at the bus terminal hence saving you time and cost.</p><p> You can also book a seat online and check when the bus will be leaving. </p>
             </div>
         </div>
         <div className="container">
@@ -134,7 +135,7 @@ export default function Home(){
                 
                 <div className="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
                     <img src={logo} />
-                  <h3 class="rights">Safiri.</h3>
+                  <h3 class="rights">Yeluri.</h3>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-12">
                   <h6 class="mb-3 mb-lg-4 bold-text ">
@@ -150,8 +151,8 @@ export default function Home(){
                   <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5">
                     <b>ADDRESS</b>
                   </h6>
-                  <p class="mb-1">605, Ngong Rd</p>
-                  <p>Nairobi</p>
+                  <p class="mb-1">KPHB,p-747,opp kalamandir</p>
+                  <p>Hyderabad</p>
                 </div>
               </div>
               <div className="row ">
@@ -186,18 +187,18 @@ export default function Home(){
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>{" "}
-                    safiricustomercare@gmail.com
+                    yeluricustomercare@gmail.com
                   </small>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
                   <h6 class="text-muted bold-text">
-                    <b>Safiri Manager</b>
+                    <b>Yeluri Manager</b>
                   </h6>
                   <small>
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>{" "}
-                    safirimanager@gmail.com
+                    yelurimanager@gmail.com
                   </small>
                 </div>
               </div>

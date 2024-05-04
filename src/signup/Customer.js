@@ -124,7 +124,7 @@ function CustomerRegister(){
                 
                 <div className="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
                     <img src={logo} />
-                  <h3 class="rights">Safiri.</h3>
+                  <h3 class="rights">Yeluri.</h3>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-12">
                   <h6 class="mb-3 mb-lg-4 bold-text ">
@@ -140,8 +140,8 @@ function CustomerRegister(){
                   <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5">
                     <b>ADDRESS</b>
                   </h6>
-                  <p class="mb-1">605, Ngong Rd</p>
-                  <p>Nairobi</p>
+                  <p class="mb-1">KPHB,p-747,opp kalamandir</p>
+                  <p>Hyderabad</p>
                 </div>
               </div>
               <div className="row ">
@@ -176,18 +176,18 @@ function CustomerRegister(){
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>{" "}
-                    safiricustomercare@gmail.com
+                    yeluricustomercare@gmail.com
                   </small>
                 </div>
                 <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
                   <h6 class="text-muted bold-text">
-                    <b>Safiri Manager</b>
+                    <b>Yeluri Manager</b>
                   </h6>
                   <small>
                     <span>
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </span>{" "}
-                    safirimanager@gmail.com
+                    yelurimanager@gmail.com
                   </small>
                 </div>
               </div>

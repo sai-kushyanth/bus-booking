@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Dashboard.css'
-import bus1 from './dashboard-assets/bus1.jpeg';
+import bus1 from './dashboard-assets/bus1.jpg';
 import bus2 from './dashboard-assets/bus2.jpg';
-import bus4 from './dashboard-assets/bus3.jpg';
+import bus3 from './dashboard-assets/bus3.jpg';
 
 export default function Dashboard(){
     return(
@@ -19,7 +19,7 @@ export default function Dashboard(){
                     <img src={bus2} />
                     <div className='content-cards'>
                     <img src={bus1} />
-                    <img src={bus4} />
+                    <img src={bus3} />
 
                 </div>
               

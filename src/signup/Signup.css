@@ -1,50 +1,48 @@
-.signup{
+.signup {
   margin: 0 auto;
   padding: 5%;
-  background-color: #B37079;
-  /* border: 2px solid black; */
-  box-shadow: 15px 7px 10px gray;
-  
+  background-color: #F7CAC9; /* Soft pink background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 30%;
   margin-top: 5%;
-  
 }
-.inputs{
+
+.inputs {
   margin-bottom: 2%;
   font-size: 2em;
 }
-.inputs input{
+
+.inputs input {
   height: 4vh;
   width: 100%;
   margin: 0 auto;
   font-size: 22px;
 }
-/* label{
-  color: white;
-} */
-.book{
+
+.book {
   font-size: 2em;
 }
-.btn{
-  /* background-color: rgba(75,188,67,255); */
+
+.btn {
   text-align: center;
-  /* color: #ff5624; */
-  /* height: 4vh; */
   align-content: center;
   justify-content: center;
   align-items: center;
 }
-button{
+
+button {
   font-size: 1em;
-  /* background-color: #70232a; */
-  color: rgb(47, 82, 207);
+  background-color: #C7CEEA; /* Light blue background */
+  color: #3F72AF; /* Dark blue text color */
   border: none;
   margin-top: 1%;
 }
-form > h3{
+
+form > h3 {
   text-align: center;
   font-size: 1.5em;
 }
-.cust{
+
+.cust {
   font-size: 1.5em;
 }
